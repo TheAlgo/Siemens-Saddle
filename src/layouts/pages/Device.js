@@ -38,6 +38,11 @@ class Device extends React.Component {
                                 </div>
                                 <p class="description text-center">
                                     <center>
+                                        <form action={"http://"+device.host+"/upload_code"} method="POST"
+                                            enctype="multipart/form-data" target="blank">
+                                            <input type="file" name="file" />
+                                            <input type="submit" />
+                                        </form>
                                         <table>
                                             <tr>
                                                 <th width="100">STATUS</th>
